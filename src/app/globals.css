@@ -1,26 +1,75 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  --color-background: 252 100% 99%;
+  --color-foreground: 260 10% 15%;
+
+  --color-primary: 270 95% 65%;
+  --color-primary-foreground: 0 0% 100%;
+  --color-primary-glow: 280 100% 80%;
+
+  --color-accent: 40 80% 70%;
+  --color-accent-foreground: 0 0% 100%;
+
+  --color-muted: hsl(252 30% 96%);
+  --color-muted-foreground: hsl(260 5% 45%);
+
+  --color-border: hsl(252 30% 90%);
+  --color-input: hsl(252 30% 95%);
+  --color-ring: hsl(270 95% 65%);
+
+  --color-card: hsl(0 0% 100%);
+  --color-card-foreground: hsl(260 10% 15%);
+
+  --shadow-creative: 0 10px 40px -10px hsl(var(--primary) / 0.3);
+  --shadow-glow: 0 0 30px hsl(var(--primary-glow) / 0.4);
+
+  --gradient-primary: linear-gradient(
+    135deg,
+    hsl(var(--color-primary)),
+    hsl(var(--color-primary-glow))
+  );
+  --gradient-creative: linear-gradient(
+    135deg,
+    hsl(var(--color-primary)) 0%,
+    hsl(var(--color-accent)) 50%,
+    hsl(45 100% 70%) 100%
+  );
+  --gradient-subtle: linear-gradient(180deg, hsl(var(--color-background)), hsl(252 50% 98%));
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+@layer utilities {
+  .bg-gradient-primary {
+    background-image: var(--gradient-primary);
+  }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  .bg-gradient-creative {
+    background-image: var(--gradient-creative);
+  }
+
+  .bg-gradient-subtle {
+    background-image: var(--gradient-subtle);
+  }
+
+  .border-border-50 {
+    border-color: hsl(252 30% 90% / 0.5);
+  }
+
+  .bg-card-80 {
+    background-color: hsl(0 0% 100% / 0.8);
+  }
+
+  .bg-primary-10 {
+    background-color: hsl(var(--color-primary) / 0.1);
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
 }

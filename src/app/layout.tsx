@@ -1,15 +1,17 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Noto_Emoji, Poppins } from "next/font/google";
 import "./globals.css";
+import { Header } from "./components/layout/header";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const poppins = Poppins({
+  variable: "--font-poppins",
   subsets: ["latin"],
+  weight: ["200", "400", "600", "800"],
 });
 
 export const metadata: Metadata = {
@@ -24,10 +26,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
+      <body className={`${geistSans.variable} ${poppins.className} antialiased bg-gradient-subtle`}>
+        <div className="flex flex-col">
+          <Header />
+          {children}
+        </div>
       </body>
     </html>
   );

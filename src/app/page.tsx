@@ -1,103 +1,148 @@
-import Image from "next/image";
-
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <main className="flex-1 flex flex-col items-center">
+      <div className="max-w-2xl flex flex-col gap-12 text-center px-4 py-8">
+        <div className="flex flex-col gap-4">
+          <div className="bg-gradient-primary p-4 rounded-full w-20 h-20 mx-auto flex items-center justify-center shadow-glow">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              className="h-10 w-10 text-white"
+            >
+              <path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"></path>
+              <path d="M20 3v4"></path>
+              <path d="M22 5h-4"></path>
+              <path d="M4 17v2"></path>
+              <path d="M5 18H3"></path>
+            </svg>
+          </div>
+          <h2 className="text-4xl font-bold bg-gradient-creative bg-clip-text text-transparent">
+            Create Amazing Coloring Pages
+          </h2>
+          <p className="text-xl text-gray-500 leading-6">
+            Upload any photo and watch it transform into a beautiful coloring book page using
+            advanced edge detection
+          </p>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="rounded-lg border bg-card text-card-600 shadow-sm p-6 text-center border-border-50 transition-all flex flex-col gap-2">
+            <div className="bg-primary-10 p-3 rounded-full w-12 h-12 mx-auto mb-4 flex items-center justify-center">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="h-6 w-6 text-primary"
+              >
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                <polyline points="17 8 12 3 7 8"></polyline>
+                <line x1="12" x2="12" y1="3" y2="15"></line>
+              </svg>
+            </div>
+            <h3 className="font-semibold">Easy Upload</h3>
+            <p className="text-sm text-muted-foreground">
+              Drag & drop or click to upload your favorite photos
+            </p>
+          </div>
+          <div className="rounded-lg border bg-card text-card-600 shadow-sm p-6 text-center border-border-50 transition-all flex flex-col gap-2">
+            <div className="bg-primary-10 p-3 rounded-full w-12 h-12 mx-auto mb-4 flex items-center justify-center">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="h-6 w-6 text-primary"
+              >
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                <polyline points="17 8 12 3 7 8"></polyline>
+                <line x1="12" x2="12" y1="3" y2="15"></line>
+              </svg>
+            </div>
+            <h3 className="font-semibold">Easy Upload</h3>
+            <p className="text-sm text-muted-foreground">
+              Drag & drop or click to upload your favorite photos
+            </p>
+          </div>
+          <div className="rounded-lg border bg-card text-card-600 shadow-sm p-6 text-center border-border-50 transition-all flex flex-col gap-2">
+            <div className="bg-primary-10 p-3 rounded-full w-12 h-12 mx-auto mb-4 flex items-center justify-center">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="h-6 w-6 text-primary"
+              >
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                <polyline points="17 8 12 3 7 8"></polyline>
+                <line x1="12" x2="12" y1="3" y2="15"></line>
+              </svg>
+            </div>
+            <h3 className="font-semibold">Easy Upload</h3>
+            <p className="text-sm text-muted-foreground">
+              Drag & drop or click to upload your favorite photos
+            </p>
+          </div>
+        </div>
+        <div className="rounded-lg bg-card text-card-foreground shadow-sm border-2 border-dashed transition-all duration-300 cursor-pointer overflow-hidden border-border hover:border-primary/50 hover:bg-primary/5">
+          <div className="p-12 text-center flex flex-col gap-2">
+            <div className="bg-gradient-primary p-4 rounded-full w-16 h-16 mx-auto mb-2 flex items-center justify-center">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="h-8 w-8 text-white"
+              >
+                <rect width="18" height="18" x="3" y="3" rx="2" ry="2"></rect>
+                <circle cx="9" cy="9" r="2"></circle>
+                <path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"></path>
+              </svg>
+            </div>
+            <h3 className="text-lg font-semibold">Upload a photo</h3>
+            <p className="text-muted-foreground mb-4">Drag & drop an image or click to browse</p>
+            <div className="">
+              <button className="inline-flex items-center justify-center gap-2 text-sm font-medium bg-gradient-creative text-primary-foreground hover:shadow-glow transform transition-all hover:scale-105 h-11 rounded-md px-8">
+                Choose Image
+              </button>
+            </div>
+            <p className="text-xs text-muted-foreground mt-2">Supports JPG, PNG, WEBP up to 10MB</p>
+          </div>
+        </div>
+      </div>
+      <div className="w-full border-t border-border-50 bg-card-80 backdrop-blur-sm mt-16">
+        <div className="px-4 py-8 text-center">
+          <p className="text-muted-foreground">
+            Transform your memories into creative coloring experiences
+          </p>
+        </div>
+      </div>
+    </main>
   );
 }
